@@ -1,0 +1,16 @@
+.footer .footer-about a.cf_email, .footer .footer-about a.cf_phone{
+    font-size: 14px;
+        text-transform: lowercase;
+            color: var(--default-color);
+                font-family: var(--default-font);
+}
+
+.footer .footer-about a.cf_email:hover, .footer .footer-about a.cf_phone:hover{
+    color: var(--accent-color);
+    text-decoration: underline;
+}   
+
+
+.skills .progress .skill{
+    text-transform: capitalize;
+}
