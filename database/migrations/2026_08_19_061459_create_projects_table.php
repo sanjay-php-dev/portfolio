@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('description')->nullable();
             $table->string('image')->nullable();
             $table->string('project_url')->nullable();
-            $table->json('technologies')->nullable();
+            $table->unsignedBigInteger('technologies')->nullable();
             $table->unsignedInteger('sort_order')->default(0);
             $table->timestamps();
         });

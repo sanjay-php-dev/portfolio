@@ -7,7 +7,9 @@
       <div class="container">
         <div class="row gy-4">        
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">          
-          <h1>{{ $siteSetting->headline }}</h1>
+          <small>Hello, I am</small>
+          <!-- <h1>{{ $siteSetting->headline }}</h1> -->
+           <h1>{{ $siteSetting->name }}</h1>
           <p>{{ $siteSetting->short_bio }}</p>
 
           <div class="d-flex">
@@ -87,14 +89,14 @@
   <!-- About Section -->
   <section id="about" class="about section">
     <div class="container section-title" data-aos="fade-up">
-      <h2>About Me</h2>
+      <h2>About</h2>
     </div>
 
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
           <p>{!! nl2br(e($siteSetting->about)) !!}</p>
-          <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          <!-- <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a> -->
         </div>
 
       </div>

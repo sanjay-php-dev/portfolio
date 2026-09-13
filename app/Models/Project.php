@@ -15,8 +15,4 @@ class Project extends Model
         'technologies',
         'sort_order',
     ];
-
-    protected $casts = [
-        'technologies' => 'array',
-    ];
 }

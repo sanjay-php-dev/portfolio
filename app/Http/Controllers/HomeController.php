@@ -10,7 +10,9 @@ use Illuminate\Support\str;
 class HomeController extends Controller
 {
     function index(){
-        $projects = Project::orderBy('sort_order')
+        $projects = Project::select('projects.*', 's.name as technology_name')
+            ->leftJoin('skills as s', 'projects.technologies', '=', 's.id')
+            ->orderBy('sort_order')
             ->orderBy('id', 'desc')
             ->get();
 

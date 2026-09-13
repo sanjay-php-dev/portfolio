@@ -4,7 +4,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Portfolio</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -14,8 +14,14 @@
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
             <li data-filter="*" class="filter-active">All</li>
 
+            @php
+                $allowedSkills = ['CodeIgniter', 'Laravel', 'WordPress', 'PHP'];
+            @endphp
+
             @foreach($skills as $skill)
-              <li data-filter=".filter-{{ $skill->slug }}">{{ $skill->name }}</li>
+                @if(in_array($skill->name, $allowedSkills, true))
+                    <li data-filter=".filter-{{ $skill->slug }}">{{ $skill->name }}</li>
+                @endif
             @endforeach
 
           </ul><!-- End Portfolio Filters -->
@@ -29,7 +35,7 @@
                           : asset('assets/img/portfolio/placeholder.png');
             @endphp
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-{{ $project->slug }}">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-{{ Str::slug($project->technology_name) }}">
               <img src="{{ $imageUrl }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>{{ $project->title }}</h4>

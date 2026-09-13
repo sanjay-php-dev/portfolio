@@ -4,7 +4,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p>Let's get started your project. Request a quote we will help you to achieve your goals and to grow your business. Get In Touch with us.</p>
+        <p>Have a project, job opportunity, or collaboration in mind? Feel free to get in touch with me.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -17,7 +17,7 @@
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
-                  <h3>Address</h3>
+                  <h3>Location</h3>
                   <p>{{ $siteSetting->location }}</p>
                 </div>
               </div><!-- End Info Item -->
@@ -25,20 +25,37 @@
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
                 <i class="bi bi-telephone flex-shrink-0"></i>
                 <div>
-                  <h3>Call Me</h3>
-                  <p>{{ $siteSetting->phone }}</p>
+                  <h3>Contact</h3>
+                  <p><a href="tel:{{ $siteSetting->phone }}" title="Phone">{{ $siteSetting->phone }}</a></p>
                 </div>
               </div><!-- End Info Item -->
 
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
-                  <h3>Email Me</h3>
-                  <p>{{ $siteSetting->email }}</p>
+                  <h3>Email</h3>
+                  <p><a href="mailto:{{ $siteSetting->email }}" title="Email">{{ $siteSetting->email }}</a></p>
                 </div>
               </div><!-- End Info Item -->
 
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14821.264951281428!2d72.03610893056626!3d21.76801853116041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395f5229da2db75b%3A0x287cde9441d11352!2sKamlej%2C%20Gujarat%20364004!5e0!3m2!1sen!2sin!4v1744702363005!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+                <i class="bi bi-linkedin flex-shrink-0"></i>
+                <div>
+                  <h3>LinkedIn</h3>
+                  <p><a href="{{ $siteSetting->linkedin_url }}" title="LinkedIn" target="_blank">{{ $siteSetting->linkedin_url }}</a></p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="600">
+                <i class="bi bi-github flex-shrink-0"></i>
+                <div>
+                  <h3>GitHub</h3>
+                  <p><a href="{{ $siteSetting->github_url }}" title="GitHub" target="_blank">{{ $siteSetting->github_url }}</a></p>
+                </div>
+              </div><!-- End Info Item -->
+
+
+              <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14821.264951281428!2d72.03610893056626!3d21.76801853116041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395f5229da2db75b%3A0x287cde9441d11352!2sKamlej%2C%20Gujarat%20364004!5e0!3m2!1sen!2sin!4v1744702363005!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
             </div>
           </div>
 

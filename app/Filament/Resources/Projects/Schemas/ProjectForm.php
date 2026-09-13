@@ -19,6 +19,7 @@ class ProjectForm
                 Section::make('Project Information')
                     ->description('Define the project and how it should appear on your portfolio.')
                     ->icon('heroicon-o-briefcase')
+                    ->columnSpanFull()
                     ->schema([
                         TextInput::make('title')
                             ->label('Project Title')
@@ -55,7 +56,6 @@ class ProjectForm
                                     ->pluck('name', 'id')
                                     ->toArray()
                             )
-                            ->multiple()
                             ->searchable()
                             ->preload()
                             ->placeholder('Select technologies')
@@ -74,6 +74,7 @@ class ProjectForm
                 Section::make('Project Image')
                     ->description('Upload the image displayed for this project.')
                     ->icon('heroicon-o-photo')
+                    ->columnSpanFull()
                     ->schema([
                         FileUpload::make('image')
                             ->label('Project Image')

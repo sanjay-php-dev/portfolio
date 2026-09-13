@@ -34,16 +34,13 @@ class ProjectsTable
                     ->getStateUsing(function ($record): string {
                         $skillIds = $record->technologies;
 
-                        if (! is_array($skillIds) || empty($skillIds)) {
+                        if (empty($skillIds)) {
                             return '-';
                         }
 
                         return Skill::query()
-                            ->whereIn('id', $skillIds)
-                            ->orderBy('sort_order')
-                            ->orderBy('name')
-                            ->pluck('name')
-                            ->implode(', ');
+                            ->where('id', $skillIds)
+                            ->value('name');
                     })
                     ->wrap(),
 

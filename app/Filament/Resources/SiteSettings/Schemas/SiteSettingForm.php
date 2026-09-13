@@ -21,6 +21,7 @@ class SiteSettingForm
                 Section::make('Personal Information')
                     ->description('Basic information displayed throughout your portfolio.')
                     ->icon('heroicon-o-user')
+                    ->columnSpanFull()
                     ->schema([
                         TextInput::make('name')
                             ->label('Name')
@@ -56,6 +57,7 @@ class SiteSettingForm
                 Section::make('Branding & Hero')
                     ->description('Manage your portfolio logo and Hero section background image.')
                     ->icon('heroicon-o-photo')
+                    ->columnSpanFull()
                     ->schema([
                         FileUpload::make('logo')
                             ->label('Logo')
@@ -97,6 +99,7 @@ class SiteSettingForm
                 Section::make('Contact Information')
                     ->description('Contact details displayed in the portfolio.')
                     ->icon('heroicon-o-envelope')
+                    ->columnSpanFull()
                     ->schema([
                         TextInput::make('email')
                             ->label('Email Address')
@@ -123,6 +126,7 @@ class SiteSettingForm
                 Section::make('Social Links')
                     ->description('Add links to your professional and social profiles.')
                     ->icon('heroicon-o-share')
+                    ->columnSpanFull()
                     ->schema([
                         TextInput::make('github_url')
                             ->label('GitHub')
